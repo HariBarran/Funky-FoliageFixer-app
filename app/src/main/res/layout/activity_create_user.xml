@@ -34,7 +34,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:text="@string/sign_in"
+        android:text="Create Account"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="normal"

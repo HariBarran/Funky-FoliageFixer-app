@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="beige">#F5DEB3</color>
+    <color name="Darkgreen">#006400</color>
+    <color name="Lightgreen">#8FBC8F</color>
+    <color name="Brown">#8B4513</color>
+    <color name="Rustorange">#D2691E</color>
+    <color name="Taupe">#483C32</color>
 </resources>

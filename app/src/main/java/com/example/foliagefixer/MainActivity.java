@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+
+        if(mAuth.getCurrentUser() != null){
+            startActivity(new Intent(this, Home.class));
+//            finish();
+        }
         email = (EditText) findViewById(R.id.mail);
         pass = (EditText) findViewById(R.id.password);
 
@@ -51,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.loginbtn:
                 userLogin();
+                startActivity(new Intent(this, Home.class));
                 break;
 
         }
