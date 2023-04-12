@@ -73,15 +73,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Image Processing"
+            android:text="Scan Details"
             android:textColor="@color/white"
             android:fontFamily="@font/poppins_semibold"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
+            app:layout_constraintEnd_toEndOf= "parent" />
         <View
             android:id="@+id/green_bar"
             android:layout_width="0dp"
@@ -103,21 +102,8 @@
             android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-
             app:layout_constraintHeight_max="300dp" />
 
-        <TextView
-            android:id="@+id/detailsTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Details: Processing.."
-            android:textColor="#333333"
-            android:fontFamily="@font/poppins_semibold"
-            android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@+id/detailsImageView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" />
 
         <TextView
             android:id="@+id/classificationTextView"
@@ -127,7 +113,7 @@
             android:textColor="#4CAF50"
             android:fontFamily="@font/poppins_semibold"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/detailsTextView"
+            app:layout_constraintTop_toBottomOf="@+id/detailsImageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="24dp" />
@@ -136,14 +122,15 @@
             android:id="@+id/severityTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="left"
             android:text="Severity: Processing..."
             android:textColor="#333333"
-            android:fontFamily="@font/poppins_semibold"
             android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@+id/classificationTextView"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/classificationTextView" />
 
         <TextView
             android:id="@+id/solutionsTextView"
@@ -170,7 +157,5 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

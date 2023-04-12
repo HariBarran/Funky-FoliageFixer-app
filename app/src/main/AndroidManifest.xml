@@ -3,8 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="true" />
+
+
 
     <application
         android:allowBackup="true"
@@ -14,12 +19,26 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoliageFixer"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:requestLegacyExternalStorage="true">
+
         <activity
             android:name=".Recent"
             android:exported="false" />
         <activity
+            android:name=".ImageDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScanDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Gallery"
+            android:exported="false" />
+        <activity
             android:name=".leafDiagnosis"
+            android:exported="false" />
+        <activity
+            android:name=".CameraXActivity"
             android:exported="false" />
         <activity
             android:name=".Home"
@@ -42,7 +61,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.foliagefixer.fileprovider"
+            android:authorities="com.example.foliagefixer.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -54,5 +73,17 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+    <queries>
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <!-- Gallery -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+    </queries>
 
 </manifest>

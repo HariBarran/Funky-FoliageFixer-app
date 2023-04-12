@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bl2"
+    android:background="#004422"
     tools:context=".CreateUser">
 
 
@@ -104,7 +104,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/cardview_dark_background"
+        app:backgroundTint="#00352A"
+        android:elevation="15dp"
         android:paddingTop="10dp"
         android:text="@string/create_user_btn"
         android:textAlignment="center" />
