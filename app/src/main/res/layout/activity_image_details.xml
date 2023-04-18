@@ -17,25 +17,32 @@
             android:elevation="10dp"
             android:background="#00352A">
 
-            <ImageView
-                android:id="@+id/logoImageView"
-                android:layout_width="60dp"
-                android:layout_height="65dp"
-                android:src="@mipmap/logo1_foreground"
-                android:layout_marginStart="16dp"
-                android:layout_gravity="start|center_vertical" />
-
-            <TextView
-                android:id="@+id/Title1"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:layout_gravity="center"
-                android:text="Foliage Fixer"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp">
+
+                <ImageView
+                    android:id="@+id/logoImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:src="@mipmap/logo1_foreground"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/Title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Foliage Fixer"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
             <FrameLayout
                 android:id="@+id/homeTextLayout"

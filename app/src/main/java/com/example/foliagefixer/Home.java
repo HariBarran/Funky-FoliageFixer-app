@@ -47,6 +47,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
             }
         });
         Toolbar toolbar = findViewById(R.id.toolbar);
+
         if(mAuth.getCurrentUser() == null){
             startActivity(new Intent(this, MainActivity.class));
             finish();
@@ -55,7 +56,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
         // Set the custom toolbar as the ActionBar
         setSupportActionBar(toolbar);
-
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         gallerycard = (CardView) findViewById(R.id.gallerycard);
         cameracard = (CardView) findViewById(R.id.cameracard);
         historycard = (CardView) findViewById(R.id.historycard);
